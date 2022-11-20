@@ -1,0 +1,29 @@
+GET http://localhost:5000/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJSZW5hbGRpIiwiZW1haWwiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE2Njg4NTg1NzcsImV4cCI6MTY2ODg1ODU5Mn0.vf2EsRTxK1sZ5CR--8qjG_uaO3gP71ixPbN0wPl3KdY
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "Renaldi",
+    "email" : "email@gmail.com",
+    "password" : "123456",
+    "confirmPassword" : "123456"
+}
+
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "email@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
